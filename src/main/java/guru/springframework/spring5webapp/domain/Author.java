@@ -16,7 +16,6 @@ public class Author {
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books = new HashSet<>();
 
-
     public Author() {
     }
 
@@ -81,5 +80,4 @@ public class Author {
     public int hashCode() {
         return id != null ? id.hashCode() : 0;
     }
-
 }
