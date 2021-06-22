@@ -20,8 +20,15 @@ public class Publisher {
     @JoinColumn(name = "publisher_id")
     private Set<Book> books = new HashSet<>();
 
-    public Publisher(){
+    public Publisher() {
+    }
 
+    public Set<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(Set<Book> books) {
+        this.books = books;
     }
 
     @Override
@@ -49,14 +56,6 @@ public class Publisher {
     @Override
     public int hashCode() {
         return id != null ? id.hashCode() : 0;
-    }
-
-    public Set<Book> getBooks() {
-        return books;
-    }
-
-    public void setBooks(Set<Book> books) {
-        this.books = books;
     }
 
     public Long getId() {
